@@ -3,6 +3,7 @@
 A cybersecurity-themed password strength analyzer that supports both Arabic and English characters. It evaluates passwords in real time based on length, character variety, entropy, and common weakness patterns, with instant visual feedback.
 
 ## KeyShield 
+![KeyShield Screenshot](password-strength-analysis.png)
 ![Strong Password](password-strength-analysis1.png)
 ![Weak Password](password-strength-analysis2.png)
 ## Overview
