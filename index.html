@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Strength Checker</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="particles" id="particles"></div>
+
+<div class="container">
+  <div class="header">
+    <span class="logo-icon">🔐</span>
+    <h1 class="title">Password Analyzer</h1>
+    <div class="subtitle">[ CYBER SECURITY SYSTEM ]</div>
+    <div class="deco-line"></div>
+  </div>
+
+  <div class="panel">
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-tr"></div>
+    <div class="corner corner-bl"></div>
+    <div class="corner corner-br"></div>
+
+    <div class="input-label">أدخل كلمة المرور للتحليل</div>
+
+    <div class="input-wrapper">
+      <input
+        type="password"
+        class="password-input"
+        id="pwInput"
+        placeholder="ادخل كلمة المرور هنا..."
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button class="toggle-btn" id="toggleBtn" title="إظهار/إخفاء">👁</button>
+    </div>
+
+    <div class="strength-section">
+      <div class="strength-header">
+        <span class="strength-label">STRENGTH LEVEL</span>
+        <span class="strength-badge" id="strengthBadge" style="color: #333; border-color: #333;">— —</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" id="barFill"></div>
+      </div>
+    </div>
+
+    <div class="segments" id="segments">
+      <div class="seg" id="seg0"></div>
+      <div class="seg" id="seg1"></div>
+      <div class="seg" id="seg2"></div>
+      <div class="seg" id="seg3"></div>
+      <div class="seg" id="seg4"></div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-box" id="stat-len">
+        <span class="stat-icon">📏</span>
+        <span class="stat-name">الطول</span>
+      </div>
+      <div class="stat-box" id="stat-sym">
+        <span class="stat-icon">⚡</span>
+        <span class="stat-name">رموز</span>
+      </div>
+      <div class="stat-box" id="stat-num">
+        <span class="stat-icon">🔢</span>
+        <span class="stat-name">أرقام</span>
+      </div>
+      <div class="stat-box" id="stat-mix">
+        <span class="stat-icon">🔠</span>
+        <span class="stat-name">أحرف مختلطة</span>
+      </div>
+    </div>
+
+    <div class="entropy-bar">
+      <span class="entropy-label">ENTROPY BITS</span>
+      <span class="entropy-val" id="entropyVal">——</span>
+    </div>
+    <div class="crack-time">
+      <span class="crack-label">ESTIMATED CRACK TIME</span>
+      <span class="crack-val" id="crackVal">——</span>
+    </div>
+
+    <div class="tips-section" id="tipsSection" style="display:none">
+      <div class="tips-title">// SYSTEM ANALYSIS</div>
+      <div id="tipsList"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
